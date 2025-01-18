@@ -67,9 +67,10 @@
         }
 
         .hero-text span {
-            color: #3a2318; /* Set Trump to black */
+            color: white; /* Match font color */
             font-weight: bold;
-            border-right: 0.2rem solid rgba(58, 35, 24, 0.8);
+            font-size: 5.5rem; /* Match font size */
+            border-right: 0.2rem solid white; /* Match cursor color */
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
@@ -107,10 +108,10 @@
 
         @keyframes blinkFade {
             0%, 50% {
-                border-color: rgba(0, 0, 0, 1);
+                border-color: rgba(255, 255, 255, 1);
             }
             51%, 100% {
-                border-color: rgba(0, 0, 0, 0);
+                border-color: rgba(255, 255, 255, 0);
             }
         }
     </style>
@@ -123,12 +124,12 @@
                 span.textContent = "Trump"; // Set text content for typing
                 void span.offsetWidth; // Trigger reflow to restart animation
                 span.style.animation = "typing 2s steps(5, end), blinkFade 0.5s step-end infinite"; 
-                span.style.borderRight = "0.2rem solid rgba(58, 35, 24, 0.8)";
+                span.style.borderRight = "0.2rem solid white";
 
                 span.addEventListener("animationend", () => {
                     setTimeout(() => {
                         span.style.animation = "none"; // Stop animation
-                        span.style.borderRight = "0.2rem solid black"; // Keep cursor visible with updated thickness
+                        span.style.borderRight = "0.2rem solid white"; // Keep cursor visible with updated thickness
                         void span.offsetWidth; // Trigger reflow to ensure cursor remains
                         setTimeout(loopAnimation, 500); // Restart the loop
                     }, 3000); // Pause for 3 seconds after typing
