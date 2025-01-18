@@ -74,7 +74,7 @@
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
-            animation: typing 2s steps(5, end), pause 2s, blinkFade 0.5s step-end infinite;
+            animation: typing 2s linear infinite, blinkFade 0.5s step-end infinite;
         }
 
         .hero-image {
@@ -103,15 +103,6 @@
             }
             100% {
                 width: 5ch; /* Adjust width for "TRUMP" */
-            }
-        }
-
-        @keyframes pause {
-            from {
-                width: 5ch;
-            }
-            to {
-                width: 5ch;
             }
         }
 
