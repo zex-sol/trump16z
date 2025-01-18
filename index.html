@@ -75,7 +75,7 @@
             border-right: 0.2rem solid white; /* Cursor for typewriter effect */
             white-space: nowrap;
             overflow: hidden;
-            animation: typing 2s steps(5, end), delete 2s steps(5, end) 2s, blink 0.5s step-end infinite;
+            animation: typing 2s steps(5, end), pause 2s, delete 2s steps(5, end) 4s;
             animation-iteration-count: infinite;
         }
 
@@ -84,7 +84,16 @@
                 width: 0;
             }
             to {
-                width: 5ch; /* Adjust width for "Trump" */
+                width: 5ch; /* Adjust width for "TRUMP" */
+            }
+        }
+
+        @keyframes pause {
+            from {
+                width: 5ch;
+            }
+            to {
+                width: 5ch;
             }
         }
 
@@ -138,7 +147,7 @@
     <div class="hero">
         <div class="hero-text">
             <h1>The First</h1>
-            <h1><span>Trump</span> Powered</h1>
+            <h1><span>TRUMP</span> Powered</h1>
             <h1>Cult Takeover</h1>
         </div>
         <div class="hero-image">
@@ -147,7 +156,7 @@
     </div>
 
     <footer>
-        <div>&copy; 2025 - SCARAI - Powered by Trump</div>
+        <div>&copy; 2025 - SCARAI - Powered by TRUMP</div>
     </footer>
 </body>
 </html>
