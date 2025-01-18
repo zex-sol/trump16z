@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElizaOS Powered Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+        *, *::before, *::after {
+            box-sizing: border-box; /* Ensure consistent box model */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            background: linear-gradient(to right, #ff7e00, #ff4500);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 1.5rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+            color: #e39643; /* Set to the hover color from the image */
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 2rem;
+            flex: 1;
+            position: relative; /* Enable positioning of the image */
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 5.5rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero-text span {
+            color: #3a2318; /* Set ElizaOS to black */
+            font-weight: bold;
+            border-right: 0.7734375rem solid rgba(58, 35, 24, 0.8); margin-right: 0.2rem; /* Cursor thickness and spacing */
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 2s steps(7, end), blinkFade 0.5s step-end infinite;
+        }
+
+        .hero-image {
+            position: fixed; /* Position the image fixed */
+            bottom: -5px; /* Align to the very bottom */
+            right: 0; /* Align to the very right */
+            max-width: 25%; /* Adjust size as needed */
+            margin: 0; /* Remove any gap */
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: none;
+            color: white;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 7ch; /* Adjust width for "ElizaOS" */
+            }
+        }
+
+        @keyframes blinkFade {
+            0%, 50% {
+                border-color: rgba(0, 0, 0, 1);
+            }
+            51%, 100% {
+                border-color: rgba(0, 0, 0, 0);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const span = document.querySelector(".hero-text span");
+
+            function loopAnimation() {
+                span.style.animation = "none"; // Reset animation
+                span.textContent = "ElizaOS"; // Set text content for typing
+                void span.offsetWidth; // Trigger reflow to restart animation
+                span.style.animation = "typing 2s steps(7, end), blinkFade 0.5s step-end infinite"; span.style.borderRight = "0.7734375rem solid rgba(58, 35, 24, 0.8)";
+
+                span.addEventListener("animationend", () => {
+                    setTimeout(() => {
+                        span.style.animation = "none"; // Stop animation
+                        span.style.borderRight = "1.03125rem solid black"; // Keep cursor visible with updated thickness
+                        // span.textContent = ""; // Clear text after 3 seconds
+                        void span.offsetWidth; // Trigger reflow to ensure cursor remains
+                        setTimeout(loopAnimation, 500); // Restart the loop
+                    }, 3000); // Pause for 3 seconds after typing
+                }, { once: true });
+            }
+
+            loopAnimation();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">&lt;scar.ai&gt;</div>
+        <nav>
+            <a href="https://x.com/scar16z" target="_blank">Twitter</a>
+            <a href="https://scar-ai.gitbook.io/scar-ai" target="_blank">GitBook</a>
+            <a href="#">Pumpfun</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>The First</h1>
+            <h1><span style="position: relative; top: 15px;">ElizaOS</span> Powered</h1>
+            <h1>AI War Machine</h1>
+        </div>
+        <div class="hero-image">
+            <img src="sc16zpfp.png" alt="Hero Image"> <!-- Updated to use the provided image -->
+        </div>
+    </div>
+
+    <footer>
+        <div>&copy; 2025 - SCARAI - Powered by ElizaOS</div>
+    </footer>
+</body>
+</html>
