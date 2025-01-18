@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trump Powered Website</title>
     <style>
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 5ch;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .typewriter {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 5.5rem;
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.2rem solid white;
+            animation: typing 2s steps(5, end), blink 0.75s step-end infinite;
+        }
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
         *, *::before, *::after {
@@ -101,7 +127,7 @@
     <div class="hero">
         <div class="hero-text">
             <h1>The First</h1>
-            <h1>TRUMP Powered</h1>
+            <h1><span class="typewriter">TRUMP</span> Powered</h1>
             <h1>Cult Takeover</h1>
         </div>
         <div class="hero-image">
