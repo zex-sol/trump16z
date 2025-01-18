@@ -67,13 +67,14 @@
         }
 
         .hero-text span {
-            color: red; /* Set TRUMP to black */
+            color: red;
             font-weight: bold;
-            border-right: 0.7734375rem solid rgba(58, 35, 24, 0.8); margin-right: 0.2rem; /* Cursor thickness and spacing */
+            border-right: 0.2rem solid rgba(58, 35, 24, 0.8);
+            margin-right: 0.2rem; /* Cursor thickness and spacing */
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
-            animation: typing 1.5s steps(5, end), blinkFade 0.5s step-end infinite;
+            animation: typing 2s linear infinite, blinkFade 0.5s step-end infinite;
         }
 
         .hero-image {
@@ -97,11 +98,11 @@
         }
 
         @keyframes typing {
-            from {
+            0% {
                 width: 0;
             }
-            to {
-                width: 7ch; /* Adjust width for "TRUMP" */
+            100% {
+                width: 5ch; /* Adjust width for "TRUMP" */
             }
         }
 
@@ -114,38 +115,12 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const span = document.querySelector(".hero-text span");
-
-            function loopAnimation() {
-                span.style.animation = "none"; // Reset animation
-                span.textContent = "TRUMP"; // Set text content for typing
-                void span.offsetWidth; // Trigger reflow to restart animation
-                span.style.animation = "typing 2s steps(7, end), blinkFade 0.5s step-end infinite"; span.style.borderRight = "0.7734375rem solid rgba(58, 35, 24, 0.8)";
-
-                span.addEventListener("animationend", () => {
-                    setTimeout(() => {
-                        span.style.animation = "none"; // Stop animation
-                        span.style.borderRight = "1.03125rem solid black"; // Keep cursor visible with updated thickness
-                        // span.textContent = ""; // Clear text after 3 seconds
-                        void span.offsetWidth; // Trigger reflow to ensure cursor remains
-                        setTimeout(loopAnimation, 500); // Restart the loop
-                    }, 3000); // Pause for 3 seconds after typing
-                }, { once: true });
-            }
-
-            loopAnimation();
-        });
-    </script>
 </head>
 <body>
     <header>
         <div class="logo">&lt;Trumpist.Circle&gt;</div>
         <nav>
             <a href="https://x.com/The_Trumpists" target="_blank">Twitter</a>
-            
-            
         </nav>
     </header>
 
