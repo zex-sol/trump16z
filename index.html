@@ -72,6 +72,25 @@
             font-weight: bold;
             color: white;
             display: inline-block;
+            border-right: 0.2rem solid white; /* Cursor for typewriter effect */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(5, end), blink 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 5ch; /* Adjust width for "Trump" */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
 
         .hero-image {
