@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElizaOS Powered Website</title>
+    <title>Trump Powered Website</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
@@ -69,7 +69,7 @@
         .hero-text span {
             color: #3a2318; /* Set Trump to black */
             font-weight: bold;
-            border-right: 0.7734375rem solid rgba(58, 35, 24, 0.8); margin-right: 0.2rem; /* Cursor thickness and spacing */
+            border-right: 0.2rem solid rgba(58, 35, 24, 0.8);
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
@@ -122,12 +122,13 @@
                 span.style.animation = "none"; // Reset animation
                 span.textContent = "Trump"; // Set text content for typing
                 void span.offsetWidth; // Trigger reflow to restart animation
-                span.style.animation = "typing 2s steps(5, end), blinkFade 0.5s step-end infinite"; span.style.borderRight = "0.7734375rem solid rgba(58, 35, 24, 0.8)";
+                span.style.animation = "typing 2s steps(5, end), blinkFade 0.5s step-end infinite"; 
+                span.style.borderRight = "0.2rem solid rgba(58, 35, 24, 0.8)";
 
                 span.addEventListener("animationend", () => {
                     setTimeout(() => {
                         span.style.animation = "none"; // Stop animation
-                        span.style.borderRight = "1.03125rem solid black"; // Keep cursor visible with updated thickness
+                        span.style.borderRight = "0.2rem solid black"; // Keep cursor visible with updated thickness
                         void span.offsetWidth; // Trigger reflow to ensure cursor remains
                         setTimeout(loopAnimation, 500); // Restart the loop
                     }, 3000); // Pause for 3 seconds after typing
@@ -140,7 +141,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">&lt;scar.ai&gt;</div>
+        <div class="logo">&lt;trump.ai&gt;</div>
         <nav>
             <a href="https://x.com/scar16z" target="_blank">Twitter</a>
             <a href="https://scar-ai.gitbook.io/scar-ai" target="_blank">GitBook</a>
@@ -151,7 +152,7 @@
     <div class="hero">
         <div class="hero-text">
             <h1>The First</h1>
-            <h1><span style="position: relative; top: 15px;">Trump</span> Powered</h1>
+            <h1><span>Trump</span> Powered</h1>
             <h1>Cult Takeover</h1>
         </div>
         <div class="hero-image">
