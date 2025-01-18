@@ -66,52 +66,6 @@
             line-height: 1.2;
         }
 
-        .hero-text span {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 5.5rem;
-            font-weight: bold;
-            color: white;
-            display: inline-block;
-            border-right: 0.2rem solid white; /* Cursor for typewriter effect */
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 2s steps(5, end), pause 2s, delete 2s steps(5, end) 4s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 5ch; /* Adjust width for "TRUMP" */
-            }
-        }
-
-        @keyframes pause {
-            from {
-                width: 5ch;
-            }
-            to {
-                width: 5ch;
-            }
-        }
-
-        @keyframes delete {
-            from {
-                width: 5ch;
-            }
-            to {
-                width: 0;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-
         .hero-image {
             position: fixed; /* Position the image fixed */
             bottom: -5px; /* Align to the very bottom */
@@ -147,7 +101,7 @@
     <div class="hero">
         <div class="hero-text">
             <h1>The First</h1>
-            <h1><span>TRUMP</span> Powered</h1>
+            <h1>TRUMP Powered</h1>
             <h1>Cult Takeover</h1>
         </div>
         <div class="hero-image">
